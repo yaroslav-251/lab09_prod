@@ -85,30 +85,125 @@
 // шаг 9
 
 
-int size = 0;
+// int size = 0;
 
-while (size <= 0)
+// while (size <= 0)
+// {
+//     Console.Write("Размер массива: ");
+//     int.TryParse(Console.ReadLine(), out size);
+
+//     if (size <= 0)
+//     {
+//         Console.WriteLine("Введите число больше нуля!");
+//     }
+// }
+
+// int[] data = new int[size];
+
+// for (int i = 0; i < data.Length; i++)
+// {
+//     Console.Write($"Элемент {i + 1}: ");
+
+//     while (!int.TryParse(Console.ReadLine(), out data[i]))
+//     {
+//         Console.WriteLine("Введите целое число!");
+//         Console.Write($"Элемент {i + 1}: ");
+//     }
+// }
+
+// Console.WriteLine("Массив: " + string.Join(", ", data));
+
+// итоговая задача
+
+
+int count = 0;
+
+while (count <= 0)
 {
-    Console.Write("Размер массива: ");
-    int.TryParse(Console.ReadLine(), out size);
+    Console.Write("Сколько результатов? ");
 
-    if (size <= 0)
+    if (!int.TryParse(Console.ReadLine(), out count) || count <= 0)
     {
-        Console.WriteLine("Введите число больше нуля!");
+        Console.WriteLine("Введите целое число больше нуля!");
+        count = 0;
     }
 }
 
-int[] data = new int[size];
+int[] results = new int[count];
 
-for (int i = 0; i < data.Length; i++)
+for (int i = 0; i < results.Length; i++)
 {
-    Console.Write($"Элемент {i + 1}: ");
+    while (true)
+    {
+        Console.Write($"Результат {i + 1}: ");
 
-    while (!int.TryParse(Console.ReadLine(), out data[i]))
+        if (int.TryParse(Console.ReadLine(), out results[i]))
+        {
+            break;
+        }
+
+        Console.WriteLine("Введите целое число!");
+    }
+}
+
+int threshold = 0;
+bool correct = false;
+
+while (!correct)
+{
+    Console.Write("Порог: ");
+
+    correct = int.TryParse(Console.ReadLine(), out threshold);
+
+    if (!correct)
     {
         Console.WriteLine("Введите целое число!");
-        Console.Write($"Элемент {i + 1}: ");
     }
 }
 
-Console.WriteLine("Массив: " + string.Join(", ", data));
+PrintResults(results);
+
+int sum = 0;
+int best = results[0];
+int worst = results[0];
+int aboveThreshold = 0;
+
+foreach (int result in results)
+{
+    sum += result;
+
+    if (result > best)
+    {
+        best = result;
+    }
+
+    if (result < worst)
+    {
+        worst = result;
+    }
+
+    if (result >= threshold)
+    {
+        aboveThreshold++;
+    }
+}
+
+double average = (double)sum / results.Length;
+
+Console.WriteLine($"Среднее: {average:F2}");
+Console.WriteLine($"Лучший результат: {best}");
+Console.WriteLine($"Худший результат: {worst}");
+Console.WriteLine($"Результатов не ниже {threshold}: {aboveThreshold}");
+
+void PrintResults(int[] array)
+{
+    Console.WriteLine();
+    Console.WriteLine("Результаты:");
+
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.WriteLine($"{i + 1}: {array[i]}");
+    }
+
+    Console.WriteLine();
+}
