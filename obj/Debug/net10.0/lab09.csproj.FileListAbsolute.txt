@@ -1,0 +1,14 @@
+/Users/yaroslav/Desktop/lab09/obj/Debug/net10.0/lab09.GeneratedMSBuildEditorConfig.editorconfig
+/Users/yaroslav/Desktop/lab09/obj/Debug/net10.0/lab09.AssemblyInfoInputs.cache
+/Users/yaroslav/Desktop/lab09/obj/Debug/net10.0/lab09.AssemblyInfo.cs
+/Users/yaroslav/Desktop/lab09/obj/Debug/net10.0/lab09.csproj.CoreCompileInputs.cache
+/Users/yaroslav/Desktop/lab09/bin/Debug/net10.0/lab09
+/Users/yaroslav/Desktop/lab09/bin/Debug/net10.0/lab09.deps.json
+/Users/yaroslav/Desktop/lab09/bin/Debug/net10.0/lab09.runtimeconfig.json
+/Users/yaroslav/Desktop/lab09/bin/Debug/net10.0/lab09.dll
+/Users/yaroslav/Desktop/lab09/bin/Debug/net10.0/lab09.pdb
+/Users/yaroslav/Desktop/lab09/obj/Debug/net10.0/lab09.dll
+/Users/yaroslav/Desktop/lab09/obj/Debug/net10.0/refint/lab09.dll
+/Users/yaroslav/Desktop/lab09/obj/Debug/net10.0/lab09.pdb
+/Users/yaroslav/Desktop/lab09/obj/Debug/net10.0/lab09.genruntimeconfig.cache
+/Users/yaroslav/Desktop/lab09/obj/Debug/net10.0/ref/lab09.dll
